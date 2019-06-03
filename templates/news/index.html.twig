@@ -1,0 +1,22 @@
+{% extends('base.html.twig') %}
+{% block title %}
+    project_name | news
+{% endblock %}
+{% block stylesheets%}
+    <link rel="stylesheet" href="/css/news_style.css">
+{% endblock %}
+{% block body %}
+    <div class="content-wrapper">
+        {% if user %}
+            <div class="profile-card">
+                <div class="card-bg-top">
+                    <img src="/images/{{ user.getImgUrl() }}" alt="photo" class="profile-card-pic">
+                </div>
+                <a href="{{ path('profile.index', {'id': user.getId()}) }}" class="card-username">{{ user.getName() }}</a>
+            </div>
+        {% endif %}
+        <div class="news-block">
+            {% include "/news/new.html.twig" %}
+        </div>
+    </div>
+{% endblock %}

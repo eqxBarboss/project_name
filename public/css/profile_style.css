@@ -1,0 +1,151 @@
+.content-wrapper{
+    justify-content: space-between;
+    display: flex;
+    /* position: relative; */
+    margin-top: 90px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    /* height: 880px; */
+    width: 80%;
+}
+
+.profile-card{
+    width: 23%;
+    height: 208px;
+    background-color: white;
+    border: 1px solid #e6ecf0;
+}
+
+.card-bg-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 95px;
+    background-color: #9370DB;
+}
+
+.profile-card-pic{
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+}
+
+.card-username{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    height: 113px;
+}
+
+.news-block{
+    border: 1px solid #e6ecf0;
+    width: 50%;
+    min-height: 730px;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.new{
+    background: snow;
+    width: 100%;
+    word-wrap: break-word;
+    display: flex;
+    height: 200px;
+    border-bottom: 1px solid #e6ecf0;
+    box-sizing: border-box;
+}
+
+.new-sender{
+    border-right: 1px solid #e6ecf0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 20%;
+    height: 100%;
+}
+
+.new-sender a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35%;
+    word-break: break-all;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.new-sender-img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65%;
+    width: 100%;
+}
+
+.new-sender-pic{
+    height: 80px;
+    width: 80px;
+}
+
+.new p{
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    width: 80%;
+}
+
+.new:nth-child(odd){
+    background-color: whitesmoke;
+}
+
+.profile-card-about{
+    width: 23%;
+    height: 450px;
+    background-color: white;
+    border: 1px solid #e6ecf0;
+}
+
+.card-about-bg-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+    background-color: #9370DB;
+}
+
+.card-about-bg-top-text{
+    color: white;
+    font-size: 35px;
+}
+
+.card-about-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 75%;
+    width: 100%;
+}
+
+.card-about-info li{
+    padding: 5px;
+    font-size: 20px;
+}

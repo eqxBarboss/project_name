@@ -1,0 +1,136 @@
+body{
+    margin: 0 auto;
+    background-image: url(../images/background.png);
+    color: grey;
+    min-width: 1000px;
+    min-height: 880px;
+}
+
+nav{
+    position: fixed;
+    height: 90px;
+    background-image: url(../images/triangles.png);
+    z-index: 1;
+}
+
+.gradient-overlay{
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    background-image: linear-gradient(rgba(68,17,136,.9),#418 37.5%,#418 50%,#222 0,#222);
+    background-size: 200% 200%;
+}
+
+nav, .gradient-overlay{
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li{
+    display: flex;
+    height: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
+    align-items:center;
+    transition: all 0.3s ease;
+}
+
+.menu-wrapper{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+nav ul li:hover{
+    background-color: #9370DB;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul, nav ul li, nav ul li a{
+    z-index: 10;
+}
+
+.profile-card{
+    width: 23%;
+    height: 208px;
+    background-color: white;
+    border: 1px solid #e6ecf0;
+}
+
+.card-bg-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 95px;
+    background-color: #9370DB;
+}
+
+.profile-card-pic{
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+}
+
+.card-username{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    height: 113px;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(68,17,136,.9);
+}
+
+footer span{
+    display: flex;
+    align-items: center;
+    float: right;
+    height: 100%;
+    width: auto;
+    color: white;
+    margin-right: 20px;
+}
+
+.btn_up{
+    border-right: 2px solid darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    height: 100%;
+}

@@ -1,0 +1,75 @@
+main{
+    margin-top: 90px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: lightgreen;
+}
+
+.add{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info{
+    padding-right: 30px;
+    display: block;
+    font-size: 20px;
+    color: black;
+    width: 60px;
+    height: 30px;
+}
+
+.add_wrap{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_new{
+    padding-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add_text, .add_id{
+    font-size: 20px;
+    width: 500px;
+}
+
+.add_text{
+
+}
+
+.add_id{
+
+}
+
+.text{
+    max-width: 70%;
+    word-break: break-all;
+}
+
+.action {
+    width: 50px;
+}

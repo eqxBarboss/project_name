@@ -1,0 +1,7 @@
+{% for triplet in triplets %}
+    <div class="galery-line">
+        {% for img in triplet %}
+            <img src="/images/{{ img.getUrl() }}" class="galery-item">
+        {% endfor %}
+    </div>
+{% endfor %}

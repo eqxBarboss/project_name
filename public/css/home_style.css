@@ -1,0 +1,154 @@
+main{
+    display: flex;
+    margin-top: 90px;
+    height: 700px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.left-col{
+    width: 60%;
+    height: 100%;
+}
+
+.left-col h1, p{
+    word-wrap: break-word;
+    margin: 0;
+    padding-left: 20%;
+}
+
+.left-col h1{
+    font-size: 60px;
+    padding-top: 150px;
+}
+
+.left-col p{
+    padding-top: 2.5%;
+    padding-right: 20%;
+    font-size: 30px;
+}
+
+.right-col{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.authorisation{
+    display: block;
+    background-color: white;
+    border-radius: 30px;
+    height: 80%;
+    width: 80%;
+    box-shadow: 4px 6px #888888;
+}
+
+.authorisation-title{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 25%;
+    color: black;
+    opacity: 0.5;
+}
+
+.authorisation-title h1{
+    margin: 0;
+    padding-left: 10%;
+}
+
+.authorisation-form-wrapper{
+    display: flex;
+    align-content: center;
+    width: 100%;
+    height: 75%;
+}
+
+.log-in{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.input-wrapper{
+    width: 70%;
+    padding-bottom: 10px;
+    height: 60px;
+}
+
+.input-wrapper span{
+    font-family: arial;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.log-in input{
+    height: 25px;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.log-in hr{
+    margin: 0;
+    width: 64%;
+    margin-bottom: 15px;
+}
+
+.buttons-wrapper{
+    display: flex;
+    width: 90%;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons-wrapper a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align: center;
+    text-decoration: none;
+    width: 40%;
+    height: 40px;
+    font-size: 17px;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+}
+
+#authErrorMsg{
+    display: none;
+    font-style: italic;
+    color: red;
+}
+
+.logout{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.logout input{
+    border-radius: 10px;
+    width: 40%;
+    height: 40px;
+    font-size: 17px;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+footer{
+    position: absolute;
+}

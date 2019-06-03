@@ -1,0 +1,11 @@
+{% for post in posts %}
+    <div class="new">
+        <div class="new-sender">
+            <div class="new-sender-img-wrapper">
+                <img src="/images/{{ authors[post.getId()].getImgUrl() }}" alt="photo" class="new-sender-pic">
+            </div>
+            <a href="{{ path('profile.index', {'id': authors[post.getId()].getId()}) }}" class="new-sender-username">{{ authors[post.getId()].getName() }}</a>
+        </div>
+        <p>{{ post.getText() }}</p>
+    </div>
+{% endfor %}

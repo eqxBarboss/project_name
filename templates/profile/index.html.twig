@@ -1,0 +1,36 @@
+{% extends('base.html.twig') %}
+{% block title %}
+    project_name | profile
+{% endblock %}
+{% block stylesheets%}
+    <link rel="stylesheet" href="/css/profile_style.css">
+{% endblock %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="profile-card">
+            <div class="card-bg-top">
+                <img src="/images/{{ user.getImgUrl() }}" alt="photo" class="profile-card-pic">
+            </div>
+            <a href="{{ path('profile.index', {'id': user.getId()}) }}" class="card-username">{{ user.getName() }}</a>
+        </div>
+        <div class="news-block">
+            {% include "/profile/new.html.twig" %}
+        </div>
+        <div class="profile-card-about">
+            <div class="card-about-bg-top">
+                <span class="card-about-bg-top-text">About</span>
+            </div>
+            <ul class="card-about-info">
+                <li>
+                    Name: {{ user.getName() }}
+                </li>
+                <li>
+                    Age: {{ user.getAge() }}
+                </li>
+                <li>
+                    Country: {{ user.getCountry() }}
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

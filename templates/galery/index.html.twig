@@ -1,0 +1,14 @@
+{% extends('base.html.twig') %}
+{% block title %}
+    project_name | galery
+{% endblock %}
+{% block stylesheets%}
+    <link rel="stylesheet" href="/css/galery_style.css">
+{% endblock %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="galery">
+            {% include '/galery/galery_line.html.twig' %}
+        </div>
+    </div>
+{% endblock %}

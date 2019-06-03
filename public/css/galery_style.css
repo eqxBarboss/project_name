@@ -1,0 +1,32 @@
+.content-wrapper{
+    justify-content: center;
+    display: flex;
+    margin-top: 90px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 730px;
+    /* height: 880px; */
+    width: 80%;
+}
+
+.galery{
+    width: 80%;
+    background-color: white;
+}
+
+.galery-line{
+    width: 100%;
+}
+
+.galery-breaker{
+    clear: both;
+}
+
+.galery-item{
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 33.33333%;
+}

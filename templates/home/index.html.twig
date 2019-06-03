@@ -1,0 +1,45 @@
+{% extends('base.html.twig') %}
+{% block title %}
+    project_name | home
+{% endblock %}
+{% block stylesheets%}
+    <link rel="stylesheet" href="/css/home_style.css">
+{% endblock %}
+{% block body %}
+    <main>
+        <div class="left-col">
+            <h1>Welcome to<br>
+                {{ PROJECT_NAME }}!
+            </h1>
+            <p>
+                {{ PROJECT_NAME }} is a new <i>revolutionary</i> resource,
+                which was made to help people share their news
+                with friends all over the world.<br>
+                <b>Join us now for free!</b>
+            </p>
+        </div>
+        <div class="right-col">
+            <div class="authorisation">
+                <div class="authorisation-title">
+                    <h1>
+                        AUTHORIZATION
+                    </h1>
+                </div>
+                <div class="authorisation-form-wrapper">
+                {% if user != null %}
+                    <form class="logout" action="{{ path('logout') }}" method="POST">
+                        <input type="submit" value="Logout">
+                    </form>
+                {% else %}
+                    <form class="log-in" method="POST">
+                        <div class="buttons-wrapper">
+                            <a href="{{ path('app_login') }}">Login</a>
+                            <a href="{{ path('app_register') }}">Register</a>
+                        </div>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+        </div>
+    </main>
+{% endblock %}

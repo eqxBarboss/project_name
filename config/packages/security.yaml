@@ -1,0 +1,67 @@
+security:
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        # used to reload user from session & other features (e.g. switch_user)
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            guard:
+                authenticators:
+                    - App\Security\LoginAuthenticator
+            logout:
+                path:   logout
+
+                # where to redirect after logout
+                target: home.index
+
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+    role_hierarchy:
+        access_decision_manager:
+            strategy: unanimous
+
+        ROLE_IMAGE_READER:      [ROLE_ADMIN]
+        ROLE_IMAGE_EDITOR:      [ROLE_IMAGE_READER]
+        ROLE_IMAGE_ADMIN:       [ROLE_IMAGE_EDITOR]
+
+        ROLE_POST_READER:       [ROLE_ADMIN]
+        ROLE_POST_EDITOR:       [ROLE_POST_READER]
+        ROLE_POST_ADMIN:        [ROLE_POST_EDITOR]
+
+        ROLE_USER_READER:       [ROLE_ADMIN]
+        ROLE_USER_EDITOR:       [ROLE_USER_READER]
+        ROLE_USER_ADMIN:        [ROLE_USER_EDITOR]
+
+        ROLE_SUPER_ADMIN:       [ROLE_ADMIN, ROLE_IMAGE_ADMIN, ROLE_POST_ADMIN, ROLE_USER_ADMIN]
+
+    access_control:
+        - { path: ^/admin/app/image/batch, roles: ROLE_IMAGE_ADMIN }
+        - { path: ^/admin/app/image/create, roles: ROLE_IMAGE_EDITOR }
+        - { path: ^/admin/app/image/\d+/edit, roles: ROLE_IMAGE_EDITOR }
+        - { path: ^/admin/app/image/list, roles: ROLE_IMAGE_READER }
+
+        - { path: ^/admin/app/post/batch, roles: ROLE_POST_ADMIN }
+        - { path: ^/admin/app/post/create, roles: ROLE_POST_EDITOR }
+        - { path: ^/admin/app/post/\d+/edit, roles: ROLE_POST_EDITOR }
+        - { path: ^/admin/app/post/list, roles: ROLE_POST_READER }
+
+        - { path: ^/admin/app/user/batch, roles: ROLE_USER_ADMIN }
+        - { path: ^/admin/app/user/create, roles: ROLE_USER_EDITOR }
+        - { path: ^/admin/app/user/\d+/edit, roles: ROLE_USER_EDITOR }
+        - { path: ^/admin/app/user/list, roles: ROLE_USER_READER }
+
+        - { path: ^/admin, roles: ROLE_ADMIN }
